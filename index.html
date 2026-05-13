@@ -1,449 +1,396 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Istamedia Agency | Web Design & Digital Marketing Portfolio</title>
-
-  <meta name="description" content="Istamedia Agency portfolio showcasing professional website design, WordPress development, SEO, digital marketing, branding, and business web solutions.">
-  <meta name="keywords" content="web design portfolio, digital marketing, SEO, WordPress development, website design, Istamedia Agency, Ahmad Samra">
-  <meta name="author" content="Istamedia Agency">
-
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
-
-    html{
-      scroll-behavior:smooth;
-    }
-
-    body{
-      font-family:Arial, Helvetica, sans-serif;
-      background:#f5f7fb;
-      color:#1f2937;
-      line-height:1.7;
-    }
-
-    a{
-      text-decoration:none;
-      color:inherit;
-    }
-
-    img{
-      max-width:100%;
-      display:block;
-    }
-
-    .container{
-      width:90%;
-      max-width:1200px;
-      margin:auto;
-    }
-
-    header{
-      position:sticky;
-      top:0;
-      z-index:999;
-      background:#ffffff;
-      box-shadow:0 4px 18px rgba(0,0,0,0.08);
-    }
-
-    .nav{
-      min-height:72px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:20px;
-    }
-
-    .logo{
-      font-size:24px;
-      font-weight:800;
-      color:#0B1F3B;
-    }
-
-    .logo span{
-      color:#00A1AB;
-    }
-
-    .menu{
-      display:flex;
-      gap:24px;
-      align-items:center;
-      flex-wrap:wrap;
-    }
-
-    .menu a{
-      font-size:15px;
-      font-weight:600;
-      color:#0B1F3B;
-      transition:0.3s;
-    }
-
-    .menu a:hover{
-      color:#00A1AB;
-    }
-
-    .arabic-btn{
-      background:#00A1AB;
-      color:#fff !important;
-      padding:9px 18px;
-      border-radius:30px;
-    }
-
-    .hero{
-      min-height:92vh;
-      display:flex;
-      align-items:center;
-      background:
-      linear-gradient(rgba(11,31,59,0.88),rgba(11,31,59,0.88)),
-      url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80");
-      background-size:cover;
-      background-position:center;
-      color:#fff;
-      text-align:center;
-    }
-
-    .hero-content{
-      max-width:900px;
-      margin:auto;
-      padding:80px 0;
-    }
-
-    .hero h1{
-      font-size:54px;
-      line-height:1.15;
-      margin-bottom:22px;
-    }
-
-    .hero p{
-      font-size:20px;
-      max-width:760px;
-      margin:0 auto 35px;
-      color:#e5e7eb;
-    }
-
-    .hero-buttons{
-      display:flex;
-      justify-content:center;
-      gap:16px;
-      flex-wrap:wrap;
-    }
-
-    .btn{
-      display:inline-block;
-      padding:14px 28px;
-      border-radius:40px;
-      font-weight:700;
-      transition:0.3s;
-    }
-
-    .btn-primary{
-      background:#00A1AB;
-      color:#fff;
-    }
-
-    .btn-primary:hover{
-      background:#008080;
-      transform:translateY(-3px);
-    }
-
-    .btn-light{
-      background:#fff;
-      color:#0B1F3B;
-    }
-
-    .btn-light:hover{
-      background:#e5e7eb;
-      transform:translateY(-3px);
-    }
-
-    section{
-      padding:90px 0;
-    }
-
-    .section-title{
-      text-align:center;
-      margin-bottom:55px;
-    }
-
-    .section-title h2{
-      font-size:38px;
-      color:#0B1F3B;
-      margin-bottom:12px;
-    }
-
-    .section-title p{
-      max-width:760px;
-      margin:auto;
-      color:#4b5563;
-      font-size:17px;
-    }
-
-    .about-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:45px;
-      align-items:center;
-    }
-
-    .about-card{
-      background:#fff;
-      padding:35px;
-      border-radius:22px;
-      box-shadow:0 12px 35px rgba(0,0,0,0.08);
-    }
-
-    .about-card h3{
-      font-size:28px;
-      color:#0B1F3B;
-      margin-bottom:15px;
-    }
-
-    .about-card p{
-      color:#4b5563;
-      margin-bottom:15px;
-    }
-
-    .skills{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:18px;
-    }
-
-    .skill-box{
-      background:#ffffff;
-      padding:20px;
-      border-left:5px solid #00A1AB;
-      border-radius:14px;
-      font-weight:700;
-      color:#0B1F3B;
-      box-shadow:0 8px 25px rgba(0,0,0,0.06);
-    }
-
-    .services{
-      background:#ffffff;
-    }
-
-    .services-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:28px;
-    }
-
-    .service-card{
-      background:#f5f7fb;
-      padding:32px;
-      border-radius:22px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.06);
-      transition:0.3s;
-    }
-
-    .service-card:hover{
-      transform:translateY(-7px);
-      box-shadow:0 18px 40px rgba(0,0,0,0.12);
-    }
-
-    .service-icon{
-      width:58px;
-      height:58px;
-      background:#00A1AB;
-      color:#fff;
-      border-radius:16px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:28px;
-      margin-bottom:20px;
-    }
-
-    .service-card h3{
-      color:#0B1F3B;
-      font-size:22px;
-      margin-bottom:12px;
-    }
-
-    .service-card p{
-      color:#4b5563;
-      font-size:15.5px;
-    }
-
-    .projects-grid{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:30px;
-    }
-
-    .project-card{
-      background:#fff;
-      border-radius:22px;
-      overflow:hidden;
-      box-shadow:0 12px 35px rgba(0,0,0,0.08);
-      transition:0.3s;
-    }
-
-    .project-card:hover{
-      transform:translateY(-7px);
-    }
-
-    .project-image{
-      height:260px;
-      background:#0B1F3B;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      color:#fff;
-      font-size:28px;
-      font-weight:800;
-      text-align:center;
-      padding:25px;
-    }
-
-    .project-content{
-      padding:28px;
-    }
-
-    .project-content h3{
-      color:#0B1F3B;
-      font-size:24px;
-      margin-bottom:12px;
-    }
-
-    .project-content p{
-      color:#4b5563;
-      margin-bottom:18px;
-    }
-
-    .tags{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      margin-bottom:20px;
-    }
-
-    .tags span{
-      background:#e6f7f8;
-      color:#008080;
-      padding:6px 12px;
-      border-radius:20px;
-      font-size:13px;
-      font-weight:700;
-    }
-
-    .project-link{
-      color:#00A1AB;
-      font-weight:800;
-    }
-
-    .contact{
-      background:#0B1F3B;
-      color:#fff;
-      text-align:center;
-    }
-
-    .contact .section-title h2,
-    .contact .section-title p{
-      color:#fff;
-    }
-
-    .contact-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:25px;
-      margin-top:35px;
-    }
-
-    .contact-card{
-      background:rgba(255,255,255,0.08);
-      padding:28px;
-      border-radius:20px;
-      border:1px solid rgba(255,255,255,0.12);
-    }
-
-    .contact-card h3{
-      font-size:21px;
-      margin-bottom:10px;
-      color:#48C6EF;
-    }
-
-    .contact-card a{
-      color:#fff;
-      font-weight:700;
-    }
-
-    footer{
-      background:#07162b;
-      color:#cbd5e1;
-      text-align:center;
-      padding:24px 15px;
-      font-size:14px;
-    }
-
-    @media(max-width:992px){
-      .hero h1{
-        font-size:42px;
-      }
-
-      .about-grid,
-      .services-grid,
-      .projects-grid,
-      .contact-grid{
-        grid-template-columns:1fr;
-      }
-
-      .skills{
-        grid-template-columns:1fr;
-      }
-    }
-
-    @media(max-width:768px){
-      .nav{
-        flex-direction:column;
-        padding:16px 0;
-      }
-
-      .menu{
-        justify-content:center;
-        gap:15px;
-      }
-
-      .hero{
-        min-height:82vh;
-      }
-
-      .hero h1{
-        font-size:34px;
-      }
-
-      .hero p{
-        font-size:17px;
-      }
-
-      section{
-        padding:65px 0;
-      }
-
-      .section-title h2{
-        font-size:30px;
-      }
-
-      .project-image{
-        height:210px;
-        font-size:22px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Istamedia Agency | Web Design Portfolio</title>
+
+<meta name="description" content="Istamedia Agency portfolio showcasing professional website design, WordPress development, SEO, digital marketing, branding, and business web solutions.">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial, Helvetica, sans-serif;
+  background:#f5f7fb;
+  color:#1f2937;
+  line-height:1.7;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+}
+
+header{
+  position:sticky;
+  top:0;
+  z-index:999;
+  background:#ffffff;
+  box-shadow:0 4px 18px rgba(0,0,0,0.08);
+}
+
+.nav{
+  min-height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.logo-wrap{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo-wrap img{
+  width:155px;
+  height:auto;
+}
+
+.menu{
+  display:flex;
+  gap:24px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.menu a{
+  font-size:15px;
+  font-weight:700;
+  color:#0B1F3B;
+}
+
+.menu a:hover{
+  color:#00A1AB;
+}
+
+.arabic-btn{
+  background:#00A1AB;
+  color:#fff !important;
+  padding:9px 18px;
+  border-radius:30px;
+}
+
+.hero{
+  min-height:90vh;
+  display:flex;
+  align-items:center;
+  background:
+  linear-gradient(rgba(11,31,59,0.88),rgba(11,31,59,0.88)),
+  url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80");
+  background-size:cover;
+  background-position:center;
+  color:#fff;
+  text-align:center;
+}
+
+.hero-content{
+  max-width:900px;
+  margin:auto;
+  padding:80px 0;
+}
+
+.hero h1{
+  font-size:54px;
+  line-height:1.15;
+  margin-bottom:22px;
+}
+
+.hero p{
+  font-size:20px;
+  max-width:760px;
+  margin:0 auto 35px;
+  color:#e5e7eb;
+}
+
+.btn{
+  display:inline-block;
+  padding:14px 28px;
+  border-radius:40px;
+  font-weight:700;
+  transition:0.3s;
+  background:#00A1AB;
+  color:#fff;
+}
+
+.btn:hover{
+  background:#008080;
+  transform:translateY(-3px);
+}
+
+section{
+  padding:90px 0;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:55px;
+}
+
+.section-title h2{
+  font-size:38px;
+  color:#0B1F3B;
+  margin-bottom:12px;
+}
+
+.section-title p{
+  max-width:760px;
+  margin:auto;
+  color:#4b5563;
+  font-size:17px;
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:45px;
+  align-items:center;
+}
+
+.about-card{
+  background:#fff;
+  padding:35px;
+  border-radius:22px;
+  box-shadow:0 12px 35px rgba(0,0,0,0.08);
+}
+
+.about-card h3{
+  font-size:28px;
+  color:#0B1F3B;
+  margin-bottom:15px;
+}
+
+.skills{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+
+.skill-box{
+  background:#ffffff;
+  padding:20px;
+  border-left:5px solid #00A1AB;
+  border-radius:14px;
+  font-weight:700;
+  color:#0B1F3B;
+  box-shadow:0 8px 25px rgba(0,0,0,0.06);
+}
+
+.services{
+  background:#ffffff;
+}
+
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
+}
+
+.service-card{
+  background:#f5f7fb;
+  padding:32px;
+  border-radius:22px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.06);
+}
+
+.service-icon{
+  width:58px;
+  height:58px;
+  background:#00A1AB;
+  color:#fff;
+  border-radius:16px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  margin-bottom:20px;
+}
+
+.service-card h3{
+  color:#0B1F3B;
+  font-size:22px;
+  margin-bottom:12px;
+}
+
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
+
+.project-card{
+  background:#fff;
+  border-radius:22px;
+  overflow:hidden;
+  box-shadow:0 12px 35px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+
+.project-card:hover{
+  transform:translateY(-7px);
+}
+
+.project-logo{
+  height:210px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:35px;
+  background:#f9fafb;
+  border-bottom:1px solid #e5e7eb;
+}
+
+.project-logo img{
+  max-height:130px;
+  max-width:85%;
+  object-fit:contain;
+}
+
+.project-content{
+  padding:26px;
+}
+
+.project-content h3{
+  color:#0B1F3B;
+  font-size:23px;
+  margin-bottom:10px;
+}
+
+.project-content p{
+  color:#4b5563;
+  margin-bottom:18px;
+  font-size:15.5px;
+}
+
+.tags{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-bottom:18px;
+}
+
+.tags span{
+  background:#e6f7f8;
+  color:#008080;
+  padding:6px 12px;
+  border-radius:20px;
+  font-size:13px;
+  font-weight:700;
+}
+
+.project-link{
+  color:#00A1AB;
+  font-weight:800;
+}
+
+.contact{
+  background:#0B1F3B;
+  color:#fff;
+  text-align:center;
+}
+
+.contact .section-title h2,
+.contact .section-title p{
+  color:#fff;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+
+.contact-card{
+  background:rgba(255,255,255,0.08);
+  padding:28px;
+  border-radius:20px;
+}
+
+.contact-card h3{
+  color:#48C6EF;
+  margin-bottom:10px;
+}
+
+footer{
+  background:#07162b;
+  color:#cbd5e1;
+  text-align:center;
+  padding:24px 15px;
+  font-size:14px;
+}
+
+@media(max-width:992px){
+  .about-grid,
+  .services-grid,
+  .projects-grid,
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero h1{
+    font-size:40px;
+  }
+}
+
+@media(max-width:768px){
+  .nav{
+    flex-direction:column;
+    padding:16px 0;
+  }
+
+  .menu{
+    justify-content:center;
+    gap:15px;
+  }
+
+  .logo-wrap img{
+    width:135px;
+  }
+
+  .hero h1{
+    font-size:32px;
+  }
+
+  .hero p{
+    font-size:17px;
+  }
+
+  section{
+    padding:65px 0;
+  }
+}
+</style>
 </head>
 
 <body>
 
 <header>
   <div class="container nav">
-    <a href="#" class="logo">Ista<span>media</span></a>
+    <a href="#" class="logo-wrap">
+      <img src="images/istamedia-logo.jpg" alt="Istamedia Agency Logo">
+    </a>
 
     <nav class="menu">
       <a href="#about">About</a>
@@ -458,15 +405,10 @@
 <section class="hero">
   <div class="container hero-content">
     <h1>Professional Web Design & Digital Marketing Portfolio</h1>
-
     <p>
-      I design modern, responsive, and SEO-friendly websites for businesses, brands, e-commerce projects, educational platforms, and industrial companies.
+      Modern websites, SEO optimization, WordPress development, branding, and digital marketing solutions for businesses and professional brands.
     </p>
-
-    <div class="hero-buttons">
-      <a href="#projects" class="btn btn-primary">View Projects</a>
-      <a href="#contact" class="btn btn-light">Contact Me</a>
-    </div>
+    <a href="#projects" class="btn">View Projects</a>
   </div>
 </section>
 
@@ -475,7 +417,7 @@
     <div class="section-title">
       <h2>About Istamedia Agency</h2>
       <p>
-        A digital portfolio by Ahmad Samra, focused on website design, WordPress development, SEO, branding, and digital marketing solutions.
+        A professional digital portfolio by Ahmad Samra, focused on web design, WordPress development, SEO, branding, and digital marketing.
       </p>
     </div>
 
@@ -512,55 +454,23 @@
     </div>
 
     <div class="services-grid">
-
       <div class="service-card">
         <div class="service-icon">💻</div>
         <h3>Website Design</h3>
-        <p>
-          Modern and responsive website design for companies, portfolios, service providers, and business brands.
-        </p>
+        <p>Modern and responsive website design for companies, portfolios, and service providers.</p>
       </div>
 
       <div class="service-card">
         <div class="service-icon">🔍</div>
         <h3>SEO Optimization</h3>
-        <p>
-          SEO-friendly website structure, optimized content, meta titles, descriptions, image alt text, and technical improvements.
-        </p>
+        <p>SEO-friendly structure, optimized content, meta descriptions, image alt text, and technical improvements.</p>
       </div>
 
       <div class="service-card">
         <div class="service-icon">🛒</div>
         <h3>WooCommerce Stores</h3>
-        <p>
-          Product catalog websites, WooCommerce stores, product pages, categories, and conversion-focused layouts.
-        </p>
+        <p>Product catalog websites, WooCommerce stores, product pages, and conversion-focused layouts.</p>
       </div>
-
-      <div class="service-card">
-        <div class="service-icon">🎯</div>
-        <h3>Digital Marketing</h3>
-        <p>
-          Marketing strategy, campaign structure, content planning, social media improvement, and online brand growth.
-        </p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">🎨</div>
-        <h3>Branding & Identity</h3>
-        <p>
-          Visual identity improvement, brand presentation, color systems, hero sections, landing pages, and professional layouts.
-        </p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">📱</div>
-        <h3>Responsive Design</h3>
-        <p>
-          Mobile-friendly layouts that work smoothly across desktop, tablet, and smartphone screens.
-        </p>
-      </div>
-
     </div>
   </div>
 </section>
@@ -570,73 +480,105 @@
     <div class="section-title">
       <h2>Selected Website Projects</h2>
       <p>
-        A collection of professional websites created for business, industrial, e-commerce, educational, and consulting sectors.
+        A collection of websites designed for business, industrial, e-commerce, education, consulting, and professional service sectors.
       </p>
     </div>
 
     <div class="projects-grid">
 
       <div class="project-card">
-        <div class="project-image">Turkish Future Group</div>
+        <div class="project-logo">
+          <img src="images/tfg-logo.png" alt="Turkish Future Group Logo">
+        </div>
         <div class="project-content">
           <h3>Turkish Future Group</h3>
-          <p>
-            A professional building solutions website focused on construction materials, insulation systems, cladding products, and group company presentation.
-          </p>
-          <div class="tags">
-            <span>WordPress</span>
-            <span>SEO</span>
-            <span>Industrial Design</span>
-          </div>
+          <p>Building solutions website for construction materials, insulation, cladding, and group company presentation.</p>
+          <div class="tags"><span>WordPress</span><span>SEO</span><span>Industrial</span></div>
           <a class="project-link" href="https://tfgbuilding.com/" target="_blank">Visit Website →</a>
         </div>
       </div>
 
       <div class="project-card">
-        <div class="project-image">Masar Al Diriyah</div>
+        <div class="project-logo">
+          <img src="images/masar-logo.png" alt="Masar Al Diriyah Logo">
+        </div>
         <div class="project-content">
           <h3>Masar Al Diriyah</h3>
-          <p>
-            A bilingual management consulting website with a modern corporate layout, professional service sections, and clean brand presentation.
-          </p>
-          <div class="tags">
-            <span>Corporate Website</span>
-            <span>Bilingual</span>
-            <span>Consulting</span>
-          </div>
+          <p>Corporate consulting website with a modern bilingual layout and professional business identity.</p>
+          <div class="tags"><span>Corporate</span><span>Consulting</span><span>Bilingual</span></div>
           <a class="project-link" href="https://masaraldiriyah.com/" target="_blank">Visit Website →</a>
         </div>
       </div>
 
       <div class="project-card">
-        <div class="project-image">My English Gate</div>
+        <div class="project-logo">
+          <img src="images/my-english-gate-logo.png" alt="My English Gate Logo">
+        </div>
         <div class="project-content">
           <h3>My English Gate</h3>
-          <p>
-            An e-learning platform designed for English courses, student access, course presentation, and professional educational branding.
-          </p>
-          <div class="tags">
-            <span>E-learning</span>
-            <span>LMS</span>
-            <span>Education</span>
-          </div>
+          <p>E-learning website designed for English courses, student access, and educational branding.</p>
+          <div class="tags"><span>LMS</span><span>Education</span><span>Courses</span></div>
           <a class="project-link" href="https://myenglishgate.com/" target="_blank">Visit Website →</a>
         </div>
       </div>
 
       <div class="project-card">
-        <div class="project-image">Sajya Textile</div>
+        <div class="project-logo">
+          <img src="images/sajya-textile-logo.png" alt="Sajya Textile Logo">
+        </div>
         <div class="project-content">
           <h3>Sajya Textile</h3>
-          <p>
-            A WooCommerce-based textile website designed to showcase products, categories, visuals, and online product browsing.
-          </p>
-          <div class="tags">
-            <span>WooCommerce</span>
-            <span>Product Catalog</span>
-            <span>Textile</span>
-          </div>
+          <p>WooCommerce textile website created for product presentation, categories, and online browsing.</p>
+          <div class="tags"><span>WooCommerce</span><span>Catalog</span><span>Textile</span></div>
           <a class="project-link" href="https://sajyatextile.com/" target="_blank">Visit Website →</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-logo">
+          <img src="images/fixper-logo.png" alt="Fixper Insulation Logo">
+        </div>
+        <div class="project-content">
+          <h3>Fixper Insulation</h3>
+          <p>Product-focused design for insulation materials, waterproofing systems, and construction solutions.</p>
+          <div class="tags"><span>Products</span><span>Insulation</span><span>SEO</span></div>
+          <a class="project-link" href="#contact">Project Details →</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-logo">
+          <img src="images/syrian-lawyer-club-logo.webp" alt="Syrian Lawyer Club Logo">
+        </div>
+        <div class="project-content">
+          <h3>Syrian Lawyer Club</h3>
+          <p>Professional website concept for legal services, community identity, and structured online presence.</p>
+          <div class="tags"><span>Legal</span><span>Branding</span><span>Website</span></div>
+          <a class="project-link" href="#contact">Project Details →</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-logo">
+          <img src="images/rakaez-alarab-logo.png" alt="Rakaez Alarab Logo">
+        </div>
+        <div class="project-content">
+          <h3>Rakaez Alarab</h3>
+          <p>Business identity and digital presentation project with a clean and professional visual direction.</p>
+          <div class="tags"><span>Branding</span><span>Business</span><span>Design</span></div>
+          <a class="project-link" href="#contact">Project Details →</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-logo">
+          <img src="images/qimam-logo.webp" alt="Qimam Alalamiah Logo">
+        </div>
+        <div class="project-content">
+          <h3>Qimam Alalamiah</h3>
+          <p>Professional brand presentation project focused on modern identity and digital visibility.</p>
+          <div class="tags"><span>Brand Identity</span><span>Digital</span><span>Business</span></div>
+          <a class="project-link" href="#contact">Project Details →</a>
         </div>
       </div>
 
@@ -648,32 +590,24 @@
   <div class="container">
     <div class="section-title">
       <h2>Contact Istamedia Agency</h2>
-      <p>
-        For website design, SEO, digital marketing, portfolio websites, and business web solutions.
-      </p>
+      <p>For website design, SEO, digital marketing, and business web solutions.</p>
     </div>
 
     <div class="contact-grid">
-
       <div class="contact-card">
         <h3>Email</h3>
-        <p>
-          <a href="mailto:istamedia2024@gmail.com">istamedia2024@gmail.com</a>
-        </p>
+        <p><a href="mailto:istamedia2024@gmail.com">istamedia2024@gmail.com</a></p>
       </div>
 
       <div class="contact-card">
         <h3>Phone & WhatsApp</h3>
-        <p>
-          <a href="https://wa.me/905523849474" target="_blank">+90 552 384 9474</a>
-        </p>
+        <p><a href="https://wa.me/905523849474" target="_blank">+90 552 384 9474</a></p>
       </div>
 
       <div class="contact-card">
         <h3>Location</h3>
         <p>Türkiye</p>
       </div>
-
     </div>
   </div>
 </section>
